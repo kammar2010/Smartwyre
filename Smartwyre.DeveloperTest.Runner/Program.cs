@@ -31,7 +31,7 @@ class Program
 
     private static decimal GetDecimalInput(string input)
     {
-        if (decimal.TryParse(input, out decimal intValue))
+        if (!decimal.TryParse(input, out decimal intValue))
         {
             Console.WriteLine("The input is not a valid decimal. Using 0");
         }
